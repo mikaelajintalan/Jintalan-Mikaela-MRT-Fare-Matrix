@@ -1,0 +1,44 @@
+﻿@{ ViewData["Title"] = "Register"; }
+
+<style>
+    body {
+        background-color: #F4C0AF
+    }
+</style>
+
+<h1>Create</h1>
+<hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Register" method="post">
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">User Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="username" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" name="password" id="password" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-6 col-form-label">First Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="name" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Last Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="lastName" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,11 @@
+﻿@using Microsoft.AspNetCore.Identity;
+
+@inject UserManager<AppUser> UserManager
+
+
+<h1>Client Page</h1>
+
+
+<a asp-controller="Client" asp-action="Details" asp-route-id="@UserManager.GetUserId(User)">
+    Details
+</a>

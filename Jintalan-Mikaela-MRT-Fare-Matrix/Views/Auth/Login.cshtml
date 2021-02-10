@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Log-in";
+}
+
+<style>
+    body {
+        background-color: #F4C0AF;
+    }
+</style>
+    <p><br/><br/></p>        
+            <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div id="login-box" class="col-md-12">
+                            <form asp-action="Login" method="post">
+                                <h1 style="color:red" class="display-4 text-center">Login</h1>
+                                <hr />
+                                <div class="form-group">
+                                    <label for="username" class="text-info">Username:</label><br>
+                                    <input type="text" name="username" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-info">Password:</label><br>
+                                    <input type="password" name="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-info btn-md">Sign me in</button>
+                                </div>
+                                <div class="text-right">
+                                    <a class="text-info" asp-action="Register">Register here</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
