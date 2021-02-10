@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Jintalan_Mikaela_MRT_Fare_Matrix.Models;
 
-namespace adet_midterm_q2_jintalan_mikaela.Controllers
+namespace Jintalan_Mikaela_MRT_Fare_Matrix.Controllers
 {
     public class HomeController : Controller
     {

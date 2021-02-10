@@ -17,8 +17,8 @@ namespace Jintalan_Mikaela_MRT_Fare_Matrix.Models
         }
         
         public DbSet<AppUser> AppUsers { get; set; }
-       
-        
+        public DbSet<ClientProfile> clientProfile { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
