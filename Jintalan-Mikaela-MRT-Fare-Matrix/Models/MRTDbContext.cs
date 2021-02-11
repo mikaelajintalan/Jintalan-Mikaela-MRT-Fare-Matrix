@@ -24,7 +24,7 @@ namespace Jintalan_Mikaela_MRT_Fare_Matrix.Models
         {
             base.OnModelCreating(builder);
             string ADMIN_ID = "16446968-4cef-46d6-83c5-d3a00de4f250";
-            //create user
+            
             var appUser = new AppUser
             {
                 Id = ADMIN_ID,
@@ -36,10 +36,10 @@ namespace Jintalan_Mikaela_MRT_Fare_Matrix.Models
                 NormalizedUserName = "ADMINMIKA",
                 NormalizedEmail = "JINTALANMIKAELA@GMAIL.COM"
             };
-            //set user password
+          
             PasswordHasher<AppUser> ph = new PasswordHasher<AppUser>();
             appUser.PasswordHash = ph.HashPassword(appUser, "mikay23");
-            //seed user
+          
             builder.Entity<AppUser>().HasData(appUser);
         }
     }

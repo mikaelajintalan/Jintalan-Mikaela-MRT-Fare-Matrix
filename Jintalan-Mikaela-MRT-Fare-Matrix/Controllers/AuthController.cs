@@ -29,21 +29,21 @@ namespace Jintalan_Mikaela_MRT_Fare_Matrix.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(string userName, string password)
+        public async Task<IActionResult> Login(string userName, string passWord)
         {
-            var user = await userManager.FindByNameAsync(userName); //name = username
+            var user = await userManager.FindByNameAsync(userName); 
 
             if (user != null)
             {
                 
-                //sign in
-                var signInResult = await signInManager.PasswordSignInAsync(user.UserName, password, false, false);
+               
+                var signInResult = await signInManager.PasswordSignInAsync(user.UserName, passWord, false, false);
 
                 if (signInResult.Succeeded)
                 {
                     if(user.Access == "Client")
                     {
-                        return RedirectToAction("Index", "Customer", new { area = "" });
+                        return RedirectToAction("Index", "Client", new { area = "" });
                     }
                 }
             }
@@ -58,17 +58,17 @@ namespace Jintalan_Mikaela_MRT_Fare_Matrix.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(string userName, string password, string name, string lastName)
+        public async Task<IActionResult> Register(string userName, string passWord, string firstName, string lastName)
         {
             var user = new AppUser
             {
-                FirstName = name,
+                FirstName = firstName,
                 Access = "Client",
                 LastName = lastName,
                 UserName = userName,
             };
 
-            var result = await userManager.CreateAsync(user, password);
+            var result = await userManager.CreateAsync(user, passWord);
             
             if (result.Succeeded)
             {

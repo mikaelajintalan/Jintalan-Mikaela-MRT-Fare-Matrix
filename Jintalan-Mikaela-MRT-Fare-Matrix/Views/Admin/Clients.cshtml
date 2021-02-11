@@ -1,0 +1,29 @@
+﻿@model IEnumerable<
+            Jintalan_Mikaela_MRT_Fare_Matrix.Models.AppUser>
+
+<div class="table-area">
+    <table class="table-area-content">
+        <thead>
+            <tr>
+                <th>
+                    Clients
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                @if (item.Access == "Client") 
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
